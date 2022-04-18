@@ -1,0 +1,11 @@
+[package]
+name = "rustic"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.56"
+
+[dependencies.tokio]
+version = "1.17.0"
+features = ["full"]

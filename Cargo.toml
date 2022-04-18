@@ -1,0 +1,14 @@
+[workspace]
+
+members = [
+    # The Rustic server itself 
+    "rustic",   
+    # Minecraft datatypes
+    "rustic_types",
+    # Handles packet defining, deserializing & serializing and synthetizing them to events for ECS
+    "rustic_io",
+    # Systems for ECS
+    "rustic_systems",
+    # General utilities, macros
+    "rustic_utils"
+]
