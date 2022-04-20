@@ -4,7 +4,7 @@ use anyhow::Result;
 const SEGMENT_BITS: u8 = 0x7F;
 const CONTINUE_BIT: u8 = 0x80;
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub struct VarInt(pub i32);
 
 impl<'a> ctx::TryFromCtx<'a> for VarInt {
@@ -64,7 +64,8 @@ impl<'a> ctx::TryIntoCtx for VarInt {
         Ok(offset)
     }
 }
-struct VarLong(pub i64);
+#[derive(Debug, PartialEq)]
+pub struct VarLong(pub i64);
 
 impl<'a> ctx::TryFromCtx<'a> for VarLong {
     type Error = scroll::Error;
